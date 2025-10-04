@@ -31,10 +31,17 @@ COPY .env.example .env
 # Install dependencies
 RUN composer install --no-dev --optimize-autoloader
 
+# Set Apache document root to Laravel's public folder
+RUN sed -ri -e 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/*.conf
+RUN sed -ri -e 's!/var/www/html!/var/www/html/public!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 storage bootstrap/cache \
     && a2enmod rewrite
+
+# Generate key (if not set via env)
+RUN php artisan key:generate
 
 # Expose port 80
 EXPOSE 80
