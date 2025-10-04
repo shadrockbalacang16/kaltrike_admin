@@ -13,3 +13,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+kaltrikedriverapp-firebase-adminsdk-fbsvc-1df635ed0d.json
+*.json
+firebase-credentials.json
