@@ -16,3 +16,9 @@ yarn-error.log
 kaltrikedriverapp-firebase-adminsdk-fbsvc-1df635ed0d.json
 *.json
 firebase-credentials.json
+kaltrikedriverapp-firebase-adminsdk-fbsvc-1df635ed0d.json
+firebase*.json
+*-adminsdk-*.json
+kaltrikedriverapp-firebase-adminsdk-fbsvc-1df635ed0d.json
+firebase*.json
+*-adminsdk-*.json
